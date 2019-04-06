@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+		<link rel="stylesheet" href="css/style.css" />
+		<title>Web App Dashboard</title>
+	</head>
+	<body>
+
+		<!-- Navigation section -->
+		<nav class="nav-container">
+			<!-- Top Navigation Menu -->
+			<div class="topnav">
+				<a href="#home" class="active"><strong>Your </strong> App <sup>TM</sup></a>
+				<div id="myLinks">
+					<a href="#news">
+						<!-- icon-dashboard -->
+						<svg class="svg-icon-dashboard-dims">
+							<use xlink:href="sprite/sprite.svg#icon-dashboard" class="svg-icon"></use>
+						</svg>
+					</a>
+					<a href="#contact">
+						<!-- icon-members -->
+						<svg class="svg-icon-dashboard-dims">
+							<use xlink:href="sprite/sprite.svg#icon-members" class="svg-icon"></use>
+						</svg>
+					</a>
+					<a href="#about">
+						<!-- icon-visits -->
+						<svg class="svg-icon-dashboard-dims">
+							<use xlink:href="sprite/sprite.svg#icon-visits" class="svg-icon"></use>
+						</svg>
+						</a>
+					</a>
+					<a href="#about">
+						<!-- icon-settings -->
+						<svg class="svg-icon-dashboard-dims">
+							<use xlink:href="sprite/sprite.svg#icon-settings" class="svg-icon"></use>
+						</svg>
+					</a>
+				</div>
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+					<i class="fa fa-bars"></i>
+				</a>
+			</div>
+		</nav>
+
+		<div class="wrapper"><!-- Wrapper -->
+			<!-- Search Section -->
+			<section class="search-section">
+				<div class="search-bar">
+					<h3>Dashboard</h3>
+					<div class="search">
+						<form action="" class="input-search">
+							<input type="text" name="search" placeholder="Search" >
+							<i class="fa fa-search"></i>
+						</form>
+					</div>
+				</div>
+			</section>
+
+				<div class="alert">
+					<p><strong>Alert</strong> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi itaque dolorem </p>
+					<i class="fa fa-window-close"></i>
+				</div>
+				<div class="btn">
+					<button class="btn-line" id="btn-fdi">Foreign Direct Invest</button>
+					<button class="btn-line" id="btn-portfolio">Portfolio Investment</button>
+					<button class="btn-line" id="btn-other">Other Investment</button>
+					<button class="btn-line" id="btn-capital">Capital Importation</button>
+				</div>
+
+			<canvas id="web-traffic" width="400" height="400"></canvas>
+			
+
+		</div><!-- Wrapper -->
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+		<script src="js/jquery.nice-select.min.js"></script>
+		<script src="js/chart.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>
