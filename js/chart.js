@@ -129,6 +129,8 @@ var myLineChart = new Chart(webTrafficChart, {
 		labels: labelTable,
 		datasets: [
 			{
+				label: labelFdi,
+				data: dataFdi,
 				backgroundColor: "rgba(77, 75, 113, 0.2)",
 				pointBackgroundColor: "#fff",
 				pointBorderColor: "#4d4b71"
@@ -165,36 +167,13 @@ var myLineChart = new Chart(webTrafficChart, {
 
 // Toggle Line Chart
 
-// function changeChart(chart, labels, data) {
+// const myFdiButton = (chart, labels, data) => {
 // 	chart.data.labels = labels;
 // 	chart.data.datasets.forEach(dataset => {
 // 		dataset.data = data;
 // 	});
 // 	chart.update();
-// }
+// 	console.log(chart.update());
+// };
 
-// function clickToggle(element, labels, data) {
-// 	element.on("click", () => {
-// 		changeChart(myLineChart, labels, data);
-// 	});
-// }
-
-// clickToggle($("#btn-fdi"), lebelFdi, dataFdi);
-// clickToggle($("#btn-portfolio"), labelPortfolio, dataPortfolio);
-// clickToggle($("#btn-other"), labelOther, dataOther);
-// clickToggle($("#btn-capital"), labelCapital, dataCapital);
-
-// btnFdi.addEventListener(click, e {
-// 	label.lebelFdi.style.display("none");
-// });
-
-const myFdiButton = (chart, labels, data) => {
-	chart.data.labels = labels;
-	chart.data.datasets.forEach(dataset => {
-		dataset.data = data;
-	});
-	chart.update();
-	console.log(chart.update());
-};
-
-console.log(data);
+// console.log(data);
