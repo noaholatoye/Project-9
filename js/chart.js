@@ -208,30 +208,25 @@ let myLineChart = new Chart(webTrafficChart, {
 	}
 });
 
+// console.log(myLineChart.data.datasets);
+
 function changeChart(chart, labels, data) {
-	chart.data.labels = labels;
+	chart.data.label = labels;
+	console.log(chart.data.datasets);
 	chart.data.datasets.forEach(dataset => {
-		dataset.data = data;
+		dataset.data.datasets = data;
 	});
-	chart.update();
+	myLineChart.update();
+	console.log(myLineChart);
 }
 
-function clickToggle(element) {
-	if (element == btnFdi) {
-		changeChart(myLineChart, labelFdi, dataFdi);
-	}
-	if (element == btnOther) {
-		changeChart(myLineChart, labelOther, dataOther);
-	}
-	if (element == btnCapital) {
-		changeChart(myLineChart, labelCapital, dataCapital);
-	}
-	if (element == btnPortfolio) {
-		changeChart(myLineChart, labelPortfolio, dataPortfolio);
-	}
+function clickToggle(element, labels, data) {
+	element.onclick = () => {
+		changeChart(myLineChart, labels, data);
+	};
 }
 
-clickToggle(btnFdi);
-clickToggle(btnOther);
-clickToggle(btnCapital);
-clickToggle(btnPortfolio);
+clickToggle(btnFdi, labelFdi, dataFdi);
+clickToggle(btnOther, labelOther, dataOther);
+clickToggle(btnCapital, labelCapital, dataCapital);
+clickToggle(btnPortfolio, labelPortfolio, dataPortfolio);
