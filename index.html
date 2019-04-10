@@ -11,70 +11,84 @@
 
 		<!-- Navigation section -->
 		<nav class="nav-container">
-			<!-- Top Navigation Menu -->
-			<div class="topnav">
-				<a href="#home" class="active"><strong>Your </strong> App <sup>TM</sup></a>
-				<div id="myLinks">
-					<a href="#news">
-						<!-- icon-dashboard -->
-						<svg class="svg-icon-dashboard-dims">
-							<use xlink:href="sprite/sprite.svg#icon-dashboard" class="svg-icon"></use>
-						</svg>
-					</a>
-					<a href="#contact">
-						<!-- icon-members -->
-						<svg class="svg-icon-dashboard-dims">
-							<use xlink:href="sprite/sprite.svg#icon-members" class="svg-icon"></use>
-						</svg>
-					</a>
-					<a href="#about">
-						<!-- icon-visits -->
-						<svg class="svg-icon-dashboard-dims">
-							<use xlink:href="sprite/sprite.svg#icon-visits" class="svg-icon"></use>
-						</svg>
+
+			<section class="section-1"><!-- section-1 -->
+				<!-- Top Navigation Menu -->
+				<div class="topnav">
+					<a href="#home" class="active"><strong>Your </strong> App <sup>TM</sup></a>
+					<div id="myLinks">
+						<a href="#news">
+							<!-- icon-dashboard -->
+							<svg class="svg-icon-dashboard-dims">
+								<use xlink:href="sprite/sprite.svg#icon-dashboard" class="svg-icon"></use>
+							</svg>
 						</a>
-					</a>
-					<a href="#about">
-						<!-- icon-settings -->
-						<svg class="svg-icon-dashboard-dims">
-							<use xlink:href="sprite/sprite.svg#icon-settings" class="svg-icon"></use>
-						</svg>
-					</a>
-				</div>
-				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-					<i class="fa fa-bars"></i>
-				</a>
-			</div>
-		</nav>
-
-		<div class="wrapper"><!-- Wrapper -->
-			<!-- Search Section -->
-			<section class="search-section">
-				<div class="search-bar">
-					<h3>Dashboard</h3>
-					<div class="search">
-						<form action="" class="input-search">
-							<input type="text" name="search" placeholder="Search" >
-							<i class="fa fa-search"></i>
-						</form>
+						<a href="#contact">
+							<!-- icon-members -->
+							<svg class="svg-icon-dashboard-dims">
+								<use xlink:href="sprite/sprite.svg#icon-members" class="svg-icon"></use>
+							</svg>
+						</a>
+						<a href="#about">
+							<!-- icon-visits -->
+							<svg class="svg-icon-dashboard-dims">
+								<use xlink:href="sprite/sprite.svg#icon-visits" class="svg-icon"></use>
+							</svg>
+							</a>
+						</a>
+						<a href="#about">
+							<!-- icon-settings -->
+							<svg class="svg-icon-dashboard-dims">
+								<use xlink:href="sprite/sprite.svg#icon-settings" class="svg-icon"></use>
+							</svg>
+						</a>
 					</div>
+					<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+						<i class="fa fa-bars"></i>
+					</a>
 				</div>
-			</section>
+			</nav>
 
+			<div class="wrapper"><!-- Wrapper -->
+				<!-- Search Section -->
+				
+					<div class="search-bar">
+						<h3>Dashboard</h3>
+						<div class="search">
+							<form action="" class="input-search">
+								<input type="text" name="search" placeholder="Search" >
+								<i class="fa fa-search"></i>
+							</form>
+						</div>
+					</div>
+			</section><!-- section-1 -->
+
+			<section class="section-2"> <!-- section-2 -->
 				<div class="alert">
 					<p><strong>Alert</strong> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi itaque dolorem </p>
 					<i class="fa fa-window-close"></i>
 				</div>
+
+				<!-- Add line chart -->
+				<h4 class="header-text">Capital Importation (US$ Billion)</h4>
 				<div class="btn">
 					<button class="btn-line" id="btn-fdi">Foreign Direct Invest</button>
 					<button class="btn-line" id="btn-portfolio">Portfolio Investment</button>
 					<button class="btn-line" id="btn-other">Other Investment</button>
 					<button class="btn-line" id="btn-capital">Capital Importation</button>
 				</div>
+				<canvas id="capital-information" width="400" height="400"></canvas>
+			</section><!-- section-2 -->
 
-			<canvas id="web-traffic" width="400" height="400"></canvas>
-			
+			<section class="section-3"><!-- section-3 -->
+				<h4 class="revenue">Retained Revenue</h4>
+				<canvas id="retained-revenue" width="400" height="400"></canvas>
+				
+			</section><!-- section-3 -->
+
+		
 		</div><!-- Wrapper -->
+	
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
 		<script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>

@@ -1,10 +1,13 @@
 // Get Elements
 
-let webTrafficChart = document.getElementById("web-traffic").getContext("2d");
-let btnFdi = document.getElementById("btn-fdi");
-let btnPortfolio = document.getElementById("btn-portfolio");
-let btnOther = document.getElementById("btn-other");
-let btnCapital = document.getElementById("btn-capital");
+const capitalInfo = document
+	.getElementById("capital-information")
+	.getContext("2d");
+const revenue = document.getElementById("retained-revenue").getContext("2d");
+const btnFdi = document.getElementById("btn-fdi");
+const btnPortfolio = document.getElementById("btn-portfolio");
+const btnOther = document.getElementById("btn-other");
+const btnCapital = document.getElementById("btn-capital");
 
 /* ==============================
 Declare data for line chart
@@ -120,11 +123,12 @@ let dataCapital = [
 	2.9
 ];
 
-// Toggle Line Chart
+// Declare Line Chart
 
-let myLineChart = new Chart(webTrafficChart, {
+let myLineChart = new Chart(capitalInfo, {
 	responsive: true,
 	type: "line",
+
 	data: {
 		labels: label,
 		datasets: [
@@ -132,7 +136,8 @@ let myLineChart = new Chart(webTrafficChart, {
 				data: dataFdi,
 				backgroundColor: "rgba(77, 75, 113, 0.2)",
 				pointBackgroundColor: "#fff",
-				pointBorderColor: "#4d4b71"
+				pointBorderColor: "#4d4b71",
+				lineTension: 0
 			}
 		]
 	},
@@ -159,30 +164,63 @@ let myLineChart = new Chart(webTrafficChart, {
 	}
 });
 
+// Toggle Line Chart
+
 let clickToggle = element => {
-	element.onclick = () => {
+	element.onclick = newData => {
 		if (element == btnFdi) {
-			myLineChart.data.datasets[0].data = dataFdi;
-			myLineChart.update();
+			newData = dataFdi;
 		}
 		if (element == btnOther) {
-			myLineChart.data.datasets[0].data = dataOther;
-			myLineChart.update();
+			newData = dataOther;
 		}
 		if (element == btnCapital) {
-			myLineChart.data.datasets[0].data = dataCapital;
-			myLineChart.update();
+			newData = dataCapital;
 		}
 		if (element == btnPortfolio) {
-			myLineChart.data.datasets[0].data = dataPortfolio;
-			myLineChart.update();
+			newData = dataPortfolio;
 		}
+		myLineChart.data.datasets[0].data = newData;
+		myLineChart.update();
 	};
-
-	// console.log(chart);
 };
 
 clickToggle(btnFdi);
 clickToggle(btnOther);
 clickToggle(btnCapital);
 clickToggle(btnPortfolio);
+
+// Declare Line Chart
+
+let myBarChart = new Chart(revenue, {
+	responsive: true,
+	type: "bar",
+	data: {
+		labels: ["Q1-17", "Q2-17", "Q3-17", "Q4-17", "Q1-18", "Q2-18", "Q3-18"],
+		datasets: [
+			{
+				data: [0.52, 0.65, 0.8, 0.69, 0.9, 0.9, 0.95],
+				backgroundColor: [
+					"#4D4C72",
+					"#ffd700",
+					"#115173",
+					"#053f5e",
+					"#022c43",
+					"#dd6b4d",
+					"#1c4b82"
+				],
+				pointBackgroundColor: "#fff",
+				pointBorderColor: "#4d4b71",
+				hoverBackgroundColor: "#7477BF",
+				BorderRadius: 10
+			}
+		]
+	},
+	options: {
+		legend: {
+			display: false
+		}
+	}
+});
+
+console.log(myBarChart.data.datasets);
