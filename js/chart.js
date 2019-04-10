@@ -10,7 +10,7 @@ let btnCapital = document.getElementById("btn-capital");
 Declare data for line chart
 =================================*/
 
-let labelTable = [
+let label = [
 	"Q3-13",
 	"Q1-14",
 	"Q3-14",
@@ -24,7 +24,6 @@ let labelTable = [
 	"Q3-18"
 ];
 
-let labelFdi = "Foreign Direct Investment";
 let dataFdi = [
 	0.2,
 	0.1,
@@ -49,7 +48,6 @@ let dataFdi = [
 	0.5
 ];
 
-let labelPortfolio = "Portfolio Investment";
 let dataPortfolio = [
 	3.7,
 	3.4,
@@ -74,7 +72,6 @@ let dataPortfolio = [
 	1.7
 ];
 
-let labelOther = "Other Investment";
 let dataOther = [
 	0.5,
 	1.2,
@@ -99,7 +96,6 @@ let dataOther = [
 	0.6
 ];
 
-let labelCapital = "Capital Importation";
 let dataCapital = [
 	4.4,
 	4.7,
@@ -124,60 +120,15 @@ let dataCapital = [
 	2.9
 ];
 
-// Display chart
-// var myLineChart = new Chart(webTrafficChart, {
-// 	responsive: true,
-// 	type: "line",
-// 	data: {
-// 		labels: labelTable,
-// 		datasets: [
-// 			{
-// 				label: labelFdi,
-// 				data: dataFdi,
-// 				backgroundColor: "rgba(77, 75, 113, 0.2)",
-// 				pointBackgroundColor: "#fff",
-// 				pointBorderColor: "#4d4b71"
-// 			},
-// 			{
-// 				label: labelPortfolio,
-// 				data: dataPortfolio,
-// 				backgroundColor: "rgba(179, 179, 179, 0.3)",
-// 				pointBackgroundColor: "#fff",
-// 				pointBorderColor: "#b3b3b3"
-// 			},
-// 			{
-// 				label: labelOther,
-// 				data: dataOther,
-// 				backgroundColor: "rgba(130, 201, 144, 0.3)",
-// 				pointBackgroundColor: "#fff",
-// 				pointBorderColor: "#81c98f"
-// 			},
-// 			{
-// 				label: labelCapital,
-// 				data: dataCapital,
-// 				backgroundColor: "rgba(115, 118, 191, 0.3)",
-// 				pointBackgroundColor: "#fff",
-// 				pointBorderColor: "#7376bf"
-// 			}
-// 		]
-// 	},
-// 	options: {
-// 		legend: {
-// 			display: false
-// 		}
-// 	}
-// });
-
 // Toggle Line Chart
 
 let myLineChart = new Chart(webTrafficChart, {
 	responsive: true,
 	type: "line",
 	data: {
-		labels: labelTable,
+		labels: label,
 		datasets: [
 			{
-				label: labelFdi,
 				data: dataFdi,
 				backgroundColor: "rgba(77, 75, 113, 0.2)",
 				pointBackgroundColor: "#fff",
@@ -208,25 +159,30 @@ let myLineChart = new Chart(webTrafficChart, {
 	}
 });
 
-// console.log(myLineChart.data.datasets);
-
-function changeChart(chart, labels, data) {
-	chart.data.label = labels;
-	console.log(chart.data.datasets);
-	chart.data.datasets.forEach(dataset => {
-		dataset.data.datasets = data;
-	});
-	myLineChart.update();
-	console.log(myLineChart);
-}
-
-function clickToggle(element, labels, data) {
+let clickToggle = element => {
 	element.onclick = () => {
-		changeChart(myLineChart, labels, data);
+		if (element == btnFdi) {
+			myLineChart.data.datasets[0].data = dataFdi;
+			myLineChart.update();
+		}
+		if (element == btnOther) {
+			myLineChart.data.datasets[0].data = dataOther;
+			myLineChart.update();
+		}
+		if (element == btnCapital) {
+			myLineChart.data.datasets[0].data = dataCapital;
+			myLineChart.update();
+		}
+		if (element == btnPortfolio) {
+			myLineChart.data.datasets[0].data = dataPortfolio;
+			myLineChart.update();
+		}
 	};
-}
 
-clickToggle(btnFdi, labelFdi, dataFdi);
-clickToggle(btnOther, labelOther, dataOther);
-clickToggle(btnCapital, labelCapital, dataCapital);
-clickToggle(btnPortfolio, labelPortfolio, dataPortfolio);
+	// console.log(chart);
+};
+
+clickToggle(btnFdi);
+clickToggle(btnOther);
+clickToggle(btnCapital);
+clickToggle(btnPortfolio);
