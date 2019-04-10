@@ -4,6 +4,9 @@ const capitalInfo = document
 	.getElementById("capital-information")
 	.getContext("2d");
 const revenue = document.getElementById("retained-revenue").getContext("2d");
+const domesticPro = document
+	.getElementById("domestic-production")
+	.getContext("2d");
 const btnFdi = document.getElementById("btn-fdi");
 const btnPortfolio = document.getElementById("btn-portfolio");
 const btnOther = document.getElementById("btn-other");
@@ -190,7 +193,7 @@ clickToggle(btnOther);
 clickToggle(btnCapital);
 clickToggle(btnPortfolio);
 
-// Declare Line Chart
+// Declare BarChart
 
 let myBarChart = new Chart(revenue, {
 	responsive: true,
@@ -211,8 +214,15 @@ let myBarChart = new Chart(revenue, {
 				],
 				pointBackgroundColor: "#fff",
 				pointBorderColor: "#4d4b71",
-				hoverBackgroundColor: "#7477BF",
-				BorderRadius: 10
+				hoverBackgroundColor: [
+					"#403e7e",
+					"#dbba00",
+					"#166792",
+					"#075783",
+					"#033b59",
+					"#d95d3a",
+					"#2b75ca"
+				]
 			}
 		]
 	},
@@ -223,4 +233,21 @@ let myBarChart = new Chart(revenue, {
 	}
 });
 
-console.log(myBarChart.data.datasets);
+// Declare Doughnut Chart
+
+let myDoughnutChart = new Chart(domesticPro, {
+	responsive: true,
+	type: "doughnut",
+	data: {
+		labels: ["2010", "2015", "2018"],
+		datasets: [
+			{
+				data: [15, 15, 70],
+				backgroundColor: ["#4D4C72", "#81C98F", "#7477BF"],
+				pointBackgroundColor: "#fff",
+				pointBorderColor: "#4d4b71",
+				hoverBackgroundColor: ["#44427b", "#61d177", "#5d61d5"]
+			}
+		]
+	}
+});
