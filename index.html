@@ -3,101 +3,294 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+		/>
 		<link rel="stylesheet" href="css/style.css" />
 		<title>Web App Dashboard</title>
 	</head>
 	<body>
-
-		<!-- Navigation section -->
-		<nav class="nav-container">
-
-			<section class="section-1"><!-- section-1 -->
-				<!-- Top Navigation Menu -->
-				<div class="topnav">
-					<a href="#home" class="active"><strong>Your </strong> App <sup>TM</sup></a>
-					<div id="myLinks">
-						<a href="#news">
-							<!-- icon-dashboard -->
-							<svg class="svg-icon-dashboard-dims">
-								<use xlink:href="sprite/sprite.svg#icon-dashboard" class="svg-icon"></use>
-							</svg>
-						</a>
-						<a href="#contact">
-							<!-- icon-members -->
-							<svg class="svg-icon-dashboard-dims">
-								<use xlink:href="sprite/sprite.svg#icon-members" class="svg-icon"></use>
-							</svg>
-						</a>
-						<a href="#about">
-							<!-- icon-visits -->
-							<svg class="svg-icon-dashboard-dims">
-								<use xlink:href="sprite/sprite.svg#icon-visits" class="svg-icon"></use>
-							</svg>
-							</a>
-						</a>
-						<a href="#about">
-							<!-- icon-settings -->
-							<svg class="svg-icon-dashboard-dims">
-								<use xlink:href="sprite/sprite.svg#icon-settings" class="svg-icon"></use>
-							</svg>
-						</a>
-					</div>
-					<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-						<i class="fa fa-bars"></i>
+		<!-- Navigation div -->
+		<nav class="nav-container" id="navbar">
+			<!-- Top Navigation Menu -->
+			<div class="topnav">
+				<a href="#home" class="active"
+					><strong>Your </strong> App <sup>TM</sup></a
+				>
+				<div id="myLinks">
+					<a href="#news">
+						<!-- icon-dashboard -->
+						<svg class="svg-icon-dashboard-dims">
+							<use
+								xlink:href="sprite/sprite.svg#icon-dashboard"
+								class="svg-icon"
+							></use>
+						</svg>
+					</a>
+					<a href="#contact">
+						<!-- icon-members -->
+						<svg class="svg-icon-dashboard-dims">
+							<use
+								xlink:href="sprite/sprite.svg#icon-members"
+								class="svg-icon"
+							></use>
+						</svg>
+					</a>
+					<a href="#about">
+						<!-- icon-visits -->
+						<svg class="svg-icon-dashboard-dims">
+							<use
+								xlink:href="sprite/sprite.svg#icon-visits"
+								class="svg-icon"
+							></use>
+						</svg>
+					</a>
+					<a href="#about">
+						<!-- icon-settings -->
+						<svg class="svg-icon-dashboard-dims">
+							<use
+								xlink:href="sprite/sprite.svg#icon-settings"
+								class="svg-icon"
+							></use>
+						</svg>
 					</a>
 				</div>
-			</nav>
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+					<i class="fa fa-bars"></i>
+				</a>
+			</div>
+		</nav>
 
-			<div class="wrapper"><!-- Wrapper -->
-				<!-- Search Section -->
-				
-					<div class="search-bar">
-						<h3>Dashboard</h3>
-						<div class="search">
-							<form action="" class="input-search">
-								<input type="text" name="search" placeholder="Search" >
-								<i class="fa fa-search"></i>
+		<!-- Search div -->
+		<div class="search-bar">
+			<h1>Dashboard</h1>
+			<div class="search">
+				<form class="input-search">
+					<input type="text" name="search" placeholder="Search" />
+					<i class="fa fa-search"></i>
+				</form>
+			</div>
+		</div>
+
+		<div class="wrapper">
+			<!-- Wrapper -->
+			<div id="domestic__production">
+				<!-- domestic__production -->
+				<div class="alert">
+					<p>
+						<strong>Alert</strong> Lorem ipsum, dolor sit amet consectetur
+						adipisicing elit. Eligendi itaque dolorem
+					</p>
+					<i class="fa fa-window-close"></i>
+				</div>
+				<!-- Add line chart -->
+				<h4 class="header-text">Capital Importation (US$ Billion)</h4>
+				<div class="btn line-chart">
+					<div class="switch-toggle">
+						<input type="radio" name="radio-btn" id="btn-fdi" checked />
+						<label for="btn-fdi" class="btn-line">Foreign Direct Invest</label>
+						<input type="radio" name="radio-btn" id="btn-portfolio" />
+						<label for="btn-portfolio" class="btn-line"
+							>Portfolio Investment</label
+						>
+						<input type="radio" name="radio-btn" id="btn-other" />
+						<label for="btn-other" class="btn-line">Other Investment</label>
+						<input type="radio" name="radio-btn" id="btn-capital" />
+						<label for="btn-capital" class="btn-line"
+							>Capital Importation</label
+						>
+					</div>
+					<canvas
+						class=""
+						id="capital-information"
+						width="400"
+						height="400"
+					></canvas>
+				</div>
+				<!-- domestic__production -->
+
+				<div id="retained__revenue">
+					<!-- retained__revenue -->
+					<div class="bar-chart">
+						<h4 class="revenue">Retained Revenue</h4>
+						<canvas
+							class="line-chart"
+							id="retained-revenue"
+							width="400"
+							height="400"
+						></canvas>
+					</div>
+					<div class="doughnut-chart">
+						<h4 class="revenue">Domestic Production</h4>
+						<canvas
+							class="line-chart"
+							id="domestic-production"
+							width="400"
+							height="400"
+						></canvas>
+					</div>
+				</div>
+				<!-- retained__revenue -->
+
+				<div id="social__start">
+					<!-- social__start -->
+					<h4>Social Starts</h4>
+					<div class="twitter">
+						<div class="icon-cycle">
+							<svg class="icon-sizing">
+								<use xlink:href="sprite/sprite.svg#icon-twitter"></use>
+							</svg>
+						</div>
+						<div class="social-text">
+							<h5>Twitter</h5>
+							<p>10,345</p>
+						</div>
+					</div>
+					<div class="facebook">
+						<div class="icon-cycle">
+							<svg class="icon-sizing">
+								<use xlink:href="sprite/sprite.svg#icon-facebook"></use>
+							</svg>
+						</div>
+						<div class="social-text">
+							<h5>Facebook</h5>
+							<p>8,739</p>
+						</div>
+					</div>
+					<div class="google-plus">
+						<div class="icon-cycle">
+							<svg class="icon-sizing">
+								<use xlink:href="sprite/sprite.svg#icon-google-plus"></use>
+							</svg>
+						</div>
+						<div class="social-text">
+							<h5>Google+</h5>
+							<p>2,530</p>
+						</div>
+					</div>
+				</div>
+				<!-- social__start -->
+
+				<div id="members">
+					<!-- members -->
+					<div class="new__members">
+						<!-- new__members -->
+						<h4>New Members</h4>
+						<div class="member__details">
+							<img src="images/member-1.jpg" alt="" />
+							<h5 class="member__name">Victoria Chambers</h5>
+							<p class="member__email">victoriachamber80@example.com</p>
+						</div>
+						<div class="member__details">
+							<img src="images/member-2.jpg" alt="" />
+							<h5 class="member__name">Dale Byrd</h5>
+							<p class="member__email">dalebyrd52@example.com</p>
+						</div>
+						<div class="member__details">
+							<img src="images/member-3.jpg" alt="" />
+							<h5 class="member__name">Dawn Wood</h5>
+							<p class="member__email">dwanwood16@example.com</p>
+						</div>
+						<div class="member__details">
+							<img src="images/member-4.jpg" alt="" />
+							<h5 class="member__name">Dan Oliver</h5>
+							<p class="member__email">danoliver82@example.com</p>
+						</div>
+						<div class="message__user">
+							<h4>Message User</h4>
+							<form action="#">
+								<input
+									type="text"
+									name="search"
+									id="search-user1"
+									placeholder="Search for User"
+									autocomplete="on"
+								/>
+								<textarea
+									name="message"
+									id="message__User"
+									cols="40"
+									rows="7"
+									placeholder="Message for User"
+								></textarea>
+								<button class="send">Send</button>
 							</form>
 						</div>
 					</div>
-			</section><!-- section-1 -->
+					<!-- new__members -->
+					<div id="recent__activity">
+						<!-- recent__activity -->
+						<h4>Recent Activity</h4>
+						<div class="member__details">
+							<img src="images/member-1.jpg" alt="" />
+							<h5 class="recent__activity">
+								Victoria Chambers commented on YourApp's SEO tips
+							</h5>
+							<p class="duration">4 hours ago</p>
+						</div>
+						<div class="member__details">
+							<img src="images/member-2.jpg" alt="" />
+							<h5 class="recent__activity">
+								Dale Byrd like the post Facebook's changes for 2019
+							</h5>
+							<p class="duration">5 hours ago</p>
+						</div>
+						<div class="member__details">
+							<img src="images/member-3.jpg" alt="" />
+							<h5 class="recent__activity">
+								Dawn Wood commented on post Facebook's changes for 2019
+							</h5>
+							<p class="duration">5 hours ago</p>
+						</div>
+						<div class="member__details">
+							<img src="images/member-4.jpg" alt="" />
+							<h5 class="recent__activity">
+								Dan Oliver posted YourApp's SEO tips
+							</h5>
+							<p class="duration">5 hours ago</p>
+						</div>
+						<h4>Settings</h4>
+						<form action="#">
+							<div class="email__setting">
+								<p>End Email Notifications</p>
+								<div class="toggle--off--on">
+									<input type="checkbox" id="toggle--off--on1" />
+									<label for="toggle--off--on1"></label>
+								</div>
+							</div>
+							<div class="profile__setting">
+								<p>Set Profile to Public</p>
+								<div class="toggle--off--on">
+									<input type="checkbox" id="toggle--off--on2" />
+									<label for="toggle--off--on2"></label>
+								</div>
+							</div>
 
-			<section class="section-2"> <!-- section-2 -->
-				<div class="alert">
-					<p><strong>Alert</strong> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi itaque dolorem </p>
-					<i class="fa fa-window-close"></i>
-				</div>
+							<input
+								type="text"
+								name="search"
+								id="search-user2"
+								placeholder="Search for User"
+								autocomplete="on"
+							/>
 
-				<!-- Add line chart -->
-				<h4 class="header-text">Capital Importation (US$ Billion)</h4>
-				<div class="btn">
-					<button class="btn-line" id="btn-fdi">Foreign Direct Invest</button>
-					<button class="btn-line" id="btn-portfolio">Portfolio Investment</button>
-					<button class="btn-line" id="btn-other">Other Investment</button>
-					<button class="btn-line" id="btn-capital">Capital Importation</button>
+							<button class="save">Save</button>
+							<button class="cancel">Cancel</button>
+						</form>
+					</div>
 				</div>
-				<canvas id="capital-information" width="400" height="400"></canvas>
-			</section><!-- section-2 -->
-
-			<section class="section-3"><!-- section-3 -->
-				<div class="bar-chart">
-					<h4 class="revenue">Retained Revenue</h4>
-					<canvas id="retained-revenue" width="400" height="400"></canvas>
-				</div>
-				<div class="doughnut-chart">
-					<h4 class="revenue">Domestic Production</h4>
-					<canvas id="domestic-production" width="400" height="400"></canvas>
-				</div>
-				
-			</section><!-- section-3 -->
-
-		
-		</div><!-- Wrapper -->
-	
+				<!-- recent__activity -->
+			</div>
+		</div>
+		<!-- wrapper -->
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
-		<script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.min.js"
+			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			crossorigin="anonymous"
+		></script>
 		<script src="js/chart.js"></script>
 		<script src="js/script.js"></script>
 	</body>

@@ -11,6 +11,7 @@ const btnFdi = document.getElementById("btn-fdi");
 const btnPortfolio = document.getElementById("btn-portfolio");
 const btnOther = document.getElementById("btn-other");
 const btnCapital = document.getElementById("btn-capital");
+const btnChangeColor = document.getElementsByClassName("btn-line");
 
 /* ==============================
 Declare data for line chart
@@ -205,7 +206,7 @@ let myBarChart = new Chart(revenue, {
 				data: [0.52, 0.65, 0.8, 0.69, 0.9, 0.9, 0.95],
 				backgroundColor: [
 					"#4D4C72",
-					"#ffd700",
+					"#b7ab66",
 					"#115173",
 					"#053f5e",
 					"#022c43",
@@ -215,13 +216,13 @@ let myBarChart = new Chart(revenue, {
 				pointBackgroundColor: "#fff",
 				pointBorderColor: "#4d4b71",
 				hoverBackgroundColor: [
-					"#403e7e",
-					"#dbba00",
+					"#5754ab",
+					"#ffd700",
+					"#0672ac",
+					"#0971aa",
 					"#166792",
-					"#075783",
-					"#033b59",
-					"#d95d3a",
-					"#2b75ca"
+					"#e79983",
+					"#78aae2"
 				]
 			}
 		]
