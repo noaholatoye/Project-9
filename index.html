@@ -123,16 +123,37 @@
 					</div>
 					<div class="doughnut-chart">
 						<h4 class="revenue">Domestic Production</h4>
-						<canvas
-							class="line-chart"
-							id="domestic-production"
-							width="400"
-							height="400"
-						></canvas>
+						<div class="doughnut-chart-container line-chart">
+							<div class="legend-wrapper">
+								<div class="legend">
+									<div class="legend-container">
+										<div class="legend legend-color-1"></div>
+										<p>2010</p>
+									</div>
+								</div>
+								<div class="legend">
+									<div class="legend-container">
+										<div class="legend legend-color-2"></div>
+										<p>2015</p>
+									</div>
+								</div>
+								<div class="legend">
+									<div class="legend-container">
+										<div class="legend legend-color-3"></div>
+										<p>2018</p>
+									</div>
+								</div>
+							</div>
+							<canvas
+								id="domestic-production"
+								width="400"
+								height="400"
+							></canvas>
+						</div>
 					</div>
 				</div>
-				<!-- retained__revenue -->
 
+				<!-- retained__revenue -->
 				<div id="social__start">
 					<!-- social__start -->
 					<h4>Social Starts</h4>
@@ -174,42 +195,82 @@
 
 				<div id="members">
 					<!-- members -->
-					<div class="new__members">
+					<div class="new-members">
 						<!-- new__members -->
 						<h4>New Members</h4>
-						<div class="member__details">
-							<img src="images/member-1.jpg" alt="" />
-							<h5 class="member__name">Victoria Chambers</h5>
-							<p class="member__email">victoriachamber80@example.com</p>
+						<div class="member-details">
+							<!-- Member-1 Details  -->
+							<div class="member-avatar">
+								<img src="images/member-1.jpg" alt="" />
+							</div>
+							<div class="member">
+								<h5 class="member-name">Victoria Chambers</h5>
+								<p class="member-email">victoriachamber80@example.com</p>
+							</div>
+							<div class="member-date">
+								<p>12/15/15</p>
+							</div>
 						</div>
-						<div class="member__details">
-							<img src="images/member-2.jpg" alt="" />
-							<h5 class="member__name">Dale Byrd</h5>
-							<p class="member__email">dalebyrd52@example.com</p>
+						<!-- Member-1 Details  -->
+
+						<div class="member-details">
+							<!-- Member-2 Details  -->
+							<div class="member-avatar">
+								<img src="images/member-2.jpg" alt="" />
+							</div>
+							<div class="member">
+								<h5 class="member-name">Dale Byrd</h5>
+								<p class="member-email">dalebyrd52@example.com</p>
+							</div>
+							<div class="member-date">
+								<p>12/15/15</p>
+							</div>
 						</div>
-						<div class="member__details">
-							<img src="images/member-3.jpg" alt="" />
-							<h5 class="member__name">Dawn Wood</h5>
-							<p class="member__email">dwanwood16@example.com</p>
+						<!-- Member-2 Details  -->
+
+						<div class="member-details">
+							<!-- Member-3 Details  -->
+							<div class="member-avatar">
+								<img src="images/member-3.jpg" alt="" />
+							</div>
+							<div class="member">
+								<h5 class="member-name">Dawn Wood</h5>
+								<p class="member-email">dawn.wood16@example.com</p>
+							</div>
+							<div class="member-date">
+								<p>12/15/15</p>
+							</div>
 						</div>
-						<div class="member__details">
-							<img src="images/member-4.jpg" alt="" />
-							<h5 class="member__name">Dan Oliver</h5>
-							<p class="member__email">danoliver82@example.com</p>
+						<!-- Member-3 Details  -->
+
+						<div class="member-details">
+							<!-- Member-4 Details  -->
+							<div class="member-avatar">
+								<img src="images/member-4.jpg" alt="" />
+							</div>
+							<div class="member">
+								<h5 class="member-name">Dan Oliver</h5>
+								<p class="member-email">danoliver82@example.com</p>
+							</div>
+							<div class="member-date">
+								<p>12/15/15</p>
+							</div>
 						</div>
-						<div class="message__user">
+						<!-- Member-4 Details  -->
+
+						<div class="message-user">
 							<h4>Message User</h4>
 							<form action="#">
 								<input
 									type="text"
 									name="search"
-									id="search-user1"
+									id="search-user"
 									placeholder="Search for User"
 									autocomplete="on"
 								/>
 								<textarea
 									name="message"
-									id="message__User"
+									id="textarea"
 									cols="40"
 									rows="7"
 									placeholder="Message for User"
@@ -222,44 +283,85 @@
 					<div id="recent__activity">
 						<!-- recent__activity -->
 						<h4>Recent Activity</h4>
-						<div class="member__details">
-							<img src="images/member-1.jpg" alt="" />
-							<h5 class="recent__activity">
-								Victoria Chambers commented on YourApp's SEO tips
-							</h5>
-							<p class="duration">4 hours ago</p>
+
+						<div class="member-details">
+							<!-- Activity-1  -->
+							<div class="member-avatar">
+								<img src="images/member-1.jpg" alt="" />
+							</div>
+							<div class="member">
+								<h5 class="member-name">
+									Victoria Chambers commented on YourApp's SEO tips
+								</h5>
+								<p class="member-email">4 hours ago</p>
+							</div>
+							<div class="greater-than-icon">
+								<i class="fas fa-greater-than"></i>
+							</div>
 						</div>
-						<div class="member__details">
-							<img src="images/member-2.jpg" alt="" />
-							<h5 class="recent__activity">
-								Dale Byrd like the post Facebook's changes for 2019
-							</h5>
-							<p class="duration">5 hours ago</p>
+						<!-- Activity-1  -->
+
+						<div class="member-details">
+							<!-- Activity-2  -->
+							<div class="member-avatar">
+								<img src="images/member-2.jpg" alt="" />
+							</div>
+							<div class="member">
+								<h5 class="member-name">
+									Dale Byrd like the post Facebook's changes for 2019
+								</h5>
+								<p class="member-email">5 hours ago</p>
+							</div>
+							<div class="greater-than-icon">
+								<i class="fas fa-greater-than"></i>
+							</div>
 						</div>
-						<div class="member__details">
-							<img src="images/member-3.jpg" alt="" />
-							<h5 class="recent__activity">
-								Dawn Wood commented on post Facebook's changes for 2019
-							</h5>
-							<p class="duration">5 hours ago</p>
+						<!-- Activity-2  -->
+
+						<div class="member-details">
+							<!-- Activity-3  -->
+							<div class="member-avatar">
+								<img src="images/member-3.jpg" alt="" />
+							</div>
+							<div class="member">
+								<h5 class="member-name">
+									Dawn Wood commented on post Facebook's changes for 2019
+								</h5>
+								<p class="member-email">5 hours ago</p>
+							</div>
+							<div class="greater-than-icon">
+								<i class="fas fa-greater-than"></i>
+							</div>
 						</div>
-						<div class="member__details">
-							<img src="images/member-4.jpg" alt="" />
-							<h5 class="recent__activity">
-								Dan Oliver posted YourApp's SEO tips
-							</h5>
-							<p class="duration">5 hours ago</p>
+						<!-- Activity-3  -->
+
+						<div class="member-details">
+							<!-- Activity-4  -->
+							<div class="member-avatar">
+								<img src="images/member-4.jpg" alt="" />
+							</div>
+							<div class="member">
+								<h5 class="member-name">
+									Dan Oliver posted YourApp's SEO tips
+								</h5>
+								<p class="member-email">5 hours ago</p>
+							</div>
+							<div class="greater-than-icon">
+								<i class="fas fa-greater-than"></i>
+							</div>
 						</div>
+						<!-- Activity-4  -->
+
 						<h4>Settings</h4>
 						<form action="#">
-							<div class="email__setting">
+							<div class="setting">
 								<p>End Email Notifications</p>
 								<div class="toggle--off--on">
 									<input type="checkbox" id="toggle--off--on1" />
 									<label for="toggle--off--on1"></label>
 								</div>
 							</div>
-							<div class="profile__setting">
+							<div class="setting">
 								<p>Set Profile to Public</p>
 								<div class="toggle--off--on">
 									<input type="checkbox" id="toggle--off--on2" />
@@ -274,9 +376,147 @@
 								placeholder="Search for User"
 								autocomplete="on"
 							/>
-
-							<button class="save">Save</button>
-							<button class="cancel">Cancel</button>
+							<select class="timezone">
+								<!-- Timezone  -->
+								<option value="">Select Timezone</option>
+								<option value="-12"
+									>(GMT-12:00) International Date Line West</option
+								>
+								<option value="-11">(GMT-11:00) Midway Island, Samoa</option>
+								<option value="-10">(GMT-10:00) Hawaii</option>
+								<option value="-9">(GMT-09:00) Alaska</option>
+								<option value="-8"
+									>(GMT-08:00) Pacific Time (US & Canada)</option
+								>
+								<option value="-8">(GMT-08:00) Tijuana, Baja California</option>
+								<option value="-7">(GMT-07:00) Arizona</option>
+								<option value="-7"
+									>(GMT-07:00) Chihuahua, La Paz, Mazatlan</option
+								>
+								<option value="-7"
+									>(GMT-07:00) Mountain Time (US & Canada)</option
+								>
+								<option value="-6">(GMT-06:00) Central America</option>
+								<option value="-6"
+									>(GMT-06:00) Central Time (US & Canada)</option
+								>
+								<option value="-6"
+									>(GMT-06:00) Guadalajara, Mexico City, Monterrey</option
+								>
+								<option value="-6">(GMT-06:00) Saskatchewan</option>
+								<option value="-5"
+									>(GMT-05:00) Bogota, Lima, Quito, Rio Branco</option
+								>
+								<option value="-5"
+									>(GMT-05:00) Eastern Time (US & Canada)</option
+								>
+								<option value="-5">(GMT-05:00) Indiana (East)</option>
+								<option value="-4">(GMT-04:00) Atlantic Time (Canada)</option>
+								<option value="-4">(GMT-04:00) Caracas, La Paz</option>
+								<option value="-4">(GMT-04:00) Manaus</option>
+								<option value="-4">(GMT-04:00) Santiago</option>
+								<option value="-3.5">(GMT-03:30) Newfoundland</option>
+								<option value="-3">(GMT-03:00) Brasilia</option>
+								<option value="-3">(GMT-03:00) Buenos Aires, Georgetown</option>
+								<option value="-3">(GMT-03:00) Greenland</option>
+								<option value="-3">(GMT-03:00) Montevideo</option>
+								<option value="-2">(GMT-02:00) Mid-Atlantic</option>
+								<option value="-1">(GMT-01:00) Cape Verde Is.</option>
+								<option value="-1">(GMT-01:00) Azores</option>
+								<option value="0"
+									>(GMT+00:00) Casablanca, Monrovia, Reykjavik</option
+								>
+								<option value="0"
+									>(GMT+00:00) Greenwich Mean Time : Dublin, Edinburgh, Lisbon,
+									London</option
+								>
+								<option value="1"
+									>(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm,
+									Vienna</option
+								>
+								<option value="1"
+									>(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana,
+									Prague</option
+								>
+								<option value="1"
+									>(GMT+01:00) Brussels, Copenhagen, Madrid, Paris</option
+								>
+								<option value="1"
+									>(GMT+01:00) Sarajevo, Skopje, Warsaw, Zagreb</option
+								>
+								<option value="1">(GMT+01:00) West Central Africa</option>
+								<option value="2">(GMT+02:00) Amman</option>
+								<option value="2"
+									>(GMT+02:00) Athens, Bucharest, Istanbul</option
+								>
+								<option value="2">(GMT+02:00) Beirut</option>
+								<option value="2">(GMT+02:00) Cairo</option>
+								<option value="2">(GMT+02:00) Harare, Pretoria</option>
+								<option value="2"
+									>(GMT+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn,
+									Vilnius</option
+								>
+								<option value="2">(GMT+02:00) Jerusalem</option>
+								<option value="2">(GMT+02:00) Minsk</option>
+								<option value="2">(GMT+02:00) Windhoek</option>
+								<option value="3">(GMT+03:00) Kuwait, Riyadh, Baghdad</option>
+								<option value="3"
+									>(GMT+03:00) Moscow, St. Petersburg, Volgograd</option
+								>
+								<option value="3">(GMT+03:00) Nairobi</option>
+								<option value="3">(GMT+03:00) Tbilisi</option>
+								<option value="3.5">(GMT+03:30) Tehran</option>
+								<option value="4">(GMT+04:00) Abu Dhabi, Muscat</option>
+								<option value="4">(GMT+04:00) Baku</option>
+								<option value="4">(GMT+04:00) Yerevan</option>
+								<option value="4.5">(GMT+04:30) Kabul</option>
+								<option value="5">(GMT+05:00) Yekaterinburg</option>
+								<option value="5"
+									>(GMT+05:00) Islamabad, Karachi, Tashkent</option
+								>
+								<option value="5.5">(GMT+05:30) Sri Jayawardenapura</option>
+								<option value="5.5"
+									>(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi</option
+								>
+								<option value="5.75">(GMT+05:45) Kathmandu</option>
+								<option value="6">(GMT+06:00) Almaty, Novosibirsk</option>
+								<option value="6">(GMT+06:00) Astana, Dhaka</option>
+								<option value="6.5">(GMT+06:30) Yangon (Rangoon)</option>
+								<option value="7">(GMT+07:00) Bangkok, Hanoi, Jakarta</option>
+								<option value="7">(GMT+07:00) Krasnoyarsk</option>
+								<option value="8"
+									>(GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi</option
+								>
+								<option value="8">(GMT+08:00) Kuala Lumpur, Singapore</option>
+								<option value="8">(GMT+08:00) Irkutsk, Ulaan Bataar</option>
+								<option value="8">(GMT+08:00) Perth</option>
+								<option value="8">(GMT+08:00) Taipei</option>
+								<option value="9">(GMT+09:00) Osaka, Sapporo, Tokyo</option>
+								<option value="9">(GMT+09:00) Seoul</option>
+								<option value="9">(GMT+09:00) Yakutsk</option>
+								<option value="9.5">(GMT+09:30) Adelaide</option>
+								<option value="9.5">(GMT+09:30) Darwin</option>
+								<option value="10">(GMT+10:00) Brisbane</option>
+								<option value="10"
+									>(GMT+10:00) Canberra, Melbourne, Sydney</option
+								>
+								<option value="10">(GMT+10:00) Hobart</option>
+								<option value="10">(GMT+10:00) Guam, Port Moresby</option>
+								<option value="10">(GMT+10:00) Vladivostok</option>
+								<option value="11"
+									>(GMT+11:00) Magadan, Solomon Is., New Caledonia</option
+								>
+								<option value="12">(GMT+12:00) Auckland, Wellington</option>
+								<option value="12"
+									>(GMT+12:00) Fiji, Kamchatka, Marshall Is.</option
+								>
+								<option value="13">(GMT+13:00) Nuku'alofa</option>
+							</select>
+							<!-- Timezone  -->
+							<div class="setting-btn">
+								<button class="save">Save</button>
+								<button class="cancel">Cancel</button>
+							</div>
 						</form>
 					</div>
 				</div>

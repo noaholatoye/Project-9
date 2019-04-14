@@ -250,5 +250,10 @@ let myDoughnutChart = new Chart(domesticPro, {
 				hoverBackgroundColor: ["#44427b", "#61d177", "#5d61d5"]
 			}
 		]
+	},
+	options: {
+		legend: {
+			display: false
+		}
 	}
 });
