@@ -18,6 +18,7 @@
 				<a href="#home" class="active"
 					><strong>Your </strong> App <sup>TM</sup></a
 				>
+
 				<div id="myLinks">
 					<a href="#news">
 						<!-- icon-dashboard -->
@@ -55,7 +56,11 @@
 							></use>
 						</svg>
 					</a>
+					<div class="notification-container">
+						<i class="far fa-bell fa-3x"></i>
+					</div>
 				</div>
+
 				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 					<i class="fa fa-bars"></i>
 				</a>
@@ -84,46 +89,60 @@
 					</p>
 					<i class="fa fa-window-close"></i>
 				</div>
-				<!-- Add line chart -->
-				<h4 class="header-text">Capital Importation (US$ Billion)</h4>
-				<div class="btn line-chart">
-					<div class="switch-toggle">
-						<input type="radio" name="radio-btn" id="btn-fdi" checked />
-						<label for="btn-fdi" class="btn-line">Foreign Direct Invest</label>
-						<input type="radio" name="radio-btn" id="btn-portfolio" />
-						<label for="btn-portfolio" class="btn-line"
-							>Portfolio Investment</label
-						>
-						<input type="radio" name="radio-btn" id="btn-other" />
-						<label for="btn-other" class="btn-line">Other Investment</label>
-						<input type="radio" name="radio-btn" id="btn-capital" />
-						<label for="btn-capital" class="btn-line"
-							>Capital Importation</label
-						>
+
+				<div>
+					<!-- Add line chart (Capital Importation) -->
+					<div class="line-chart-header-wrapper">
+						<!-- line-chart-header-wrapper -->
+						<h4 class="header-text">Capital Importation (US$ Billion)</h4>
+						<div class="btn line-chart">
+							<div class="switch-toggle">
+								<input type="radio" name="radio-btn" id="btn-fdi" checked />
+								<label for="btn-fdi" class="btn-line"
+									>Foreign Direct Invest</label
+								>
+								<input type="radio" name="radio-btn" id="btn-portfolio" />
+								<label for="btn-portfolio" class="btn-line"
+									>Portfolio Investment</label
+								>
+								<input type="radio" name="radio-btn" id="btn-other" />
+								<label for="btn-other" class="btn-line">Other Investment</label>
+								<input type="radio" name="radio-btn" id="btn-capital" />
+								<label for="btn-capital" class="btn-line"
+									>Capital Importation</label
+								>
+							</div>
+						</div>
 					</div>
-					<canvas
-						class=""
-						id="capital-information"
-						width="400"
-						height="400"
-					></canvas>
+					<!-- line-chart-header-wrapper -->
+					<canvas id="capital-information"></canvas>
 				</div>
-				<!-- domestic__production -->
+				<!-- Add line chart (Capital Importation) -->
 
 				<div id="retained__revenue">
 					<!-- retained__revenue -->
 					<div class="bar-chart">
 						<h4 class="revenue">Retained Revenue</h4>
-						<canvas
-							class="line-chart"
-							id="retained-revenue"
-							width="400"
-							height="400"
-						></canvas>
+						<div class="line-chart-container">
+							<canvas
+								height="400"
+								width="400"
+								class="line-chart"
+								id="retained-revenue"
+							></canvas>
+						</div>
 					</div>
+					<div class="vertical-line"></div>
 					<div class="doughnut-chart">
 						<h4 class="revenue">Domestic Production</h4>
 						<div class="doughnut-chart-container line-chart">
+							<div class="doughnut-container">
+								<canvas
+									height="400"
+									width="400"
+									id="domestic-production"
+								></canvas>
+							</div>
 							<div class="legend-wrapper">
 								<div class="legend">
 									<div class="legend-container">
@@ -144,11 +163,6 @@
 									</div>
 								</div>
 							</div>
-							<canvas
-								id="domestic-production"
-								width="400"
-								height="400"
-							></canvas>
 						</div>
 					</div>
 				</div>
@@ -157,37 +171,39 @@
 				<div id="social__start">
 					<!-- social__start -->
 					<h4>Social Starts</h4>
-					<div class="twitter">
-						<div class="icon-cycle">
-							<svg class="icon-sizing">
-								<use xlink:href="sprite/sprite.svg#icon-twitter"></use>
-							</svg>
+					<div class="social-start-wrapper">
+						<div class="twitter">
+							<div class="icon-cycle">
+								<svg class="icon-sizing">
+									<use xlink:href="sprite/sprite.svg#icon-twitter"></use>
+								</svg>
+							</div>
+							<div class="social-text">
+								<h5>Twitter</h5>
+								<p>10,345</p>
+							</div>
 						</div>
-						<div class="social-text">
-							<h5>Twitter</h5>
-							<p>10,345</p>
+						<div class="facebook">
+							<div class="icon-cycle">
+								<svg class="icon-sizing">
+									<use xlink:href="sprite/sprite.svg#icon-facebook"></use>
+								</svg>
+							</div>
+							<div class="social-text">
+								<h5>Facebook</h5>
+								<p>8,739</p>
+							</div>
 						</div>
-					</div>
-					<div class="facebook">
-						<div class="icon-cycle">
-							<svg class="icon-sizing">
-								<use xlink:href="sprite/sprite.svg#icon-facebook"></use>
-							</svg>
-						</div>
-						<div class="social-text">
-							<h5>Facebook</h5>
-							<p>8,739</p>
-						</div>
-					</div>
-					<div class="google-plus">
-						<div class="icon-cycle">
-							<svg class="icon-sizing">
-								<use xlink:href="sprite/sprite.svg#icon-google-plus"></use>
-							</svg>
-						</div>
-						<div class="social-text">
-							<h5>Google+</h5>
-							<p>2,530</p>
+						<div class="google-plus">
+							<div class="icon-cycle">
+								<svg class="icon-sizing">
+									<use xlink:href="sprite/sprite.svg#icon-google-plus"></use>
+								</svg>
+							</div>
+							<div class="social-text">
+								<h5>Google+</h5>
+								<p>2,530</p>
+							</div>
 						</div>
 					</div>
 				</div>

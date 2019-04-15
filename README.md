@@ -1,3 +1,3 @@
 ## Web App Dashboard
 
-Complete beb dashboard with JavaScript-driven charts and graphs.
+Complete Dashboard with JavaScript-driven charts and graphs.

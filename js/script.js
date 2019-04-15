@@ -26,3 +26,30 @@ function myStickyMenu() {
 		navbar.classList.remove("sticky");
 	}
 }
+
+// Notifications
+var el = document.querySelector(".fa-bell");
+
+// var count = Number(el.getAttribute('data-count')) || 0;
+// el.setAttribute('data-count', count + 1);
+// el.classList.remove('notify');
+// el.offsetWidth = el.offsetWidth;
+// el.classList.add('notify');
+// if(count === 0){
+//     el.classList.add('show-count');
+// };
+
+let getNotifications = dataCount => {
+	let data = dataCount;
+	var count = Number(el.getAttribute("data-count")) || 0;
+	el.setAttribute("data-count", data);
+	el.offsetWidth = el.offsetWidth;
+	el.classList.add("notify");
+	if (data === 2) {
+		el.classList.add("show-count");
+	} else {
+		el.classList.remove("notify");
+	}
+};
+
+getNotifications(2);
