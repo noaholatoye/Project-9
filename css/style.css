@@ -133,6 +133,13 @@ svg {
 	right: 10px;
 	top: 15px;
 }
+.profile-wrapper {
+	display: flex;
+}
+.member .member-name {
+	margin-top: 0.5em;
+	margin-left: 0.3em;
+}
 
 .search {
 	padding: 0.8em 1em 0.8em 4em;
@@ -692,4 +699,10 @@ svg {
 	.toggle-wrapper {
 		width: 45%;
 	}
+}
+
+/* ===============================
+  Media query @ 1024px
+  ================================== */
+@media (min-width: 1024px) {
 }
