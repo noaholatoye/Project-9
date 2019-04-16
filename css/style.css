@@ -339,7 +339,6 @@ svg {
 
 .line-chart {
 	padding-top: 20px;
-	/* border: 1px solid rgba(88, 88, 128, 0.1); */
 }
 .legend {
 	padding: 0.5em;
@@ -383,13 +382,6 @@ svg {
   Social Starts icons 
   ================================== */
 
-.icon-sizing {
-	width: 40px;
-	height: 40px;
-	margin-top: 14px;
-	fill: #fff;
-}
-
 .icon-cycle {
 	border-radius: 100%;
 	padding: 10px;
@@ -400,6 +392,15 @@ svg {
 	margin-right: 20px;
 	margin-left: 10px;
 }
+
+.icon-sizing {
+	width: 2em;
+	height: 2em;
+	fill: #fff;
+	position: absolute;
+	bottom: 20px;
+}
+
 .twitter,
 .facebook,
 .google-plus {
@@ -622,11 +623,20 @@ svg {
   Media query @ 768px
   ================================== */
 @media (min-width: 768px) {
+	.search {
+		padding: 0.8em 1em 1em 20em;
+	}
 	.input-search input {
+		padding-right: 4em;
 	}
-	h4 {
-		text-align: left;
+	.input-search {
+		margin-right: 2em;
 	}
+	h1 {
+		margin-left: 2.2em;
+	}
+
+	/* Line and Doughnut charts */
 	.social-start-wrapper,
 	.line-chart-header-wrapper {
 		display: flex;
@@ -634,12 +644,13 @@ svg {
 	}
 	h4 {
 		margin-top: 1.5em;
+		text-align: left;
 	}
 	#retained__revenue {
 		display: flex;
 		justify-content: space-between;
 		border: 1px solid rgba(88, 88, 128, 0.3);
-		padding: 1.5em;
+		padding: 0 1.5em;
 		margin-top: 3em;
 	}
 	.vertical-line {
@@ -652,8 +663,33 @@ svg {
 		width: 18em;
 	}
 
-	/* .doughnut-chart-container {
+	/* Social Starts */
+	.twitter,
+	.facebook,
+	.google-plus {
+		padding-right: 2em;
+	}
+
+	.social-text p {
+		font-size: 1.5em;
+	}
+
+	/* Recent activity */
+	.greater-than-icon {
+		display: block;
+	}
+	.toggle-search-wrapper {
 		display: flex;
-		width: 40%;
-	} */
+		justify-content: space-between;
+	}
+
+	.setting p {
+		margin-right: auto;
+	}
+	.user-search-wrapper {
+		width: 45%;
+	}
+	.toggle-wrapper {
+		width: 45%;
+	}
 }
