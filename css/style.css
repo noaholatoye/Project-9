@@ -312,8 +312,8 @@ svg {
 }
 .notification-box {
 	position: absolute;
-	top: 1;
-	right: 10px;
+	top: 30px;
+	right: -20px;
 	width: 300px;
 	padding: 10px 30px 20px 30px;
 	background-color: #fff;
