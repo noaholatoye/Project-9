@@ -74,7 +74,7 @@ btnSendMessage.addEventListener("click", function validateForm() {
 	if (name == "" || text == "") {
 		alert("Username and text area must be filled out");
 	} else {
-		alert("Your Message was sent successfully");
+		alert(`Your Message was sent to ${name} successfully`);
 	}
 });
 
