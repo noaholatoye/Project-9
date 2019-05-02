@@ -20,22 +20,6 @@ function myFunction() {
 	}
 }
 
-// Sticky navbar
-window.onscroll = function() {
-	myStickyMenu();
-};
-
-let navbar = document.getElementById("navbar");
-let sticky = navbar.offsetTop;
-
-function myStickyMenu() {
-	if (window.pageYOffset >= sticky) {
-		navbar.classList.add("sticky");
-	} else {
-		navbar.classList.remove("sticky");
-	}
-}
-
 // Close alert box
 let alertBox = document.querySelector(".alert");
 let closeAlert = document.querySelector(".fa-window-close");
@@ -79,39 +63,24 @@ $(function() {
 	});
 });
 
+// Validate Form
+let btnSendMessage = document.getElementById("send-btn");
+let textArea = document.getElementById("textarea");
+
+btnSendMessage.addEventListener("click", function validateForm() {
+	let name = document.forms["message-user"]["search"].value;
+	let text = textArea.value;
+
+	if (name == "" || text == "") {
+		alert("Username and text area must be filled out");
+	} else {
+		alert("Your Message was sent successfully");
+	}
+});
+
 // =====================================
 //  localStorage
 // =====================================
-
-// Validate and save strings to store of past searches
-// function saveSearchString(str) {
-// 	var searches = getRecentSearches();
-// 	if (searches.indexOf(str) > -1 || !str) {
-// 		return false;
-// 	}
-// 	searches.push(str);
-// 	localStorage.setItem("recentSearches", JSON.stringify(searches));
-// 	return true;
-// }
-
-// window.onload = function() {
-// 	// Make sure Local Storage exists before trying to use it
-// 	if (supportsLocalStorage()) {
-// 		// Get references to DOM elements
-// 		var toggle1 = document.getElementById("toggle--off--on1");
-// 		var toggle2 = document.getElementById("toggle--off--on2");
-// 		var timeZone = document.getElementById("timezone");
-// 		var saveSetting = document.querySelector("save");
-
-// 		// Set event handlers
-// 		saveSetting.addEventListener("submit", function(event) {
-// 			// Store
-// 			let saveLocal = localStorage.setItem(toggle1, toggle2, timeZone);
-// 			if (saveSearchString(saveLocal)) {
-// 			}
-// 		});
-// 	}
-// };
 
 // Save Settings to Local Storage
 

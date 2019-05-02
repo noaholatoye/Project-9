@@ -134,6 +134,7 @@ svg {
 .search-bar {
 	display: flex;
 	justify-content: center;
+	margin-top: 50px;
 }
 .input-search {
 	position: relative;
@@ -349,11 +350,11 @@ svg {
   Add sticky navbar
   ================================== */
 
-.sticky {
+.topnav {
 	position: fixed;
+	z-index: 2;
 	width: 100%;
-	z-index: 100;
-	margin-bottom: 20px;
+	top: 0;
 }
 
 /* ===============================
@@ -387,10 +388,13 @@ svg {
 .switch-toggle {
 	display: flex;
 	margin-bottom: 1em;
+	flex-wrap: wrap;
+	justify-content: center;
 }
-.btn-line {
-	flex-direction: row;
+.switch-toggle .btn-line {
+	font-size: 1em;
 }
+
 .btn label:hover {
 	background-color: #7477bf;
 	color: #fff;
@@ -687,7 +691,7 @@ svg {
 /* ===============================
   Media query @ 768px
   ================================== */
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
 	.hide-user-picture,
 	.side-navbar {
 		display: none;
@@ -775,12 +779,7 @@ svg {
 	.side-navbar {
 		display: block;
 	}
-	.topnav {
-		position: fixed;
-		z-index: 2;
-		width: 100%;
-		top: 0;
-	}
+
 	.side-navbar {
 		height: 100%;
 		width: 70px;
@@ -866,6 +865,13 @@ svg {
 		font-size: 1.2em;
 	}
 	/* Charts */
+	.switch-toggle .btn-line {
+		padding: 5px;
+		align-content: stretch;
+	}
+	.switch-toggle {
+		flex-wrap: nowrap;
+	}
 	.line-chart,
 	.doughnut-chart {
 		width: 40%;
